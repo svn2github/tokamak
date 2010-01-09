@@ -52,7 +52,7 @@ HRESULT CALLBACK OnMyAppCreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSUR
     // Setting this flag improves the shader debugging experience, but still allows 
     // the shaders to be optimized and to run exactly the way they will run in 
     // the release configuration of this program.
-    dwShaderFlags |= D3DXSHADER_DEBUG;
+	dwShaderFlags |= D3DXSHADER_ENABLE_BACKWARDS_COMPATIBILITY;
     #endif
 
     #ifdef DEBUG_VS
