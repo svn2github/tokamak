@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C++ Express 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RadDude", "RadDude.vcproj", "{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Car", "Car.vcproj", "{EE92B72B-0CBC-4962-8E12-64065F917D28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Profile|Win32 = Profile|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Debug|Win32.Build.0 = Debug|Win32
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Profile|Win32.ActiveCfg = Profile|Win32
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Profile|Win32.Build.0 = Profile|Win32
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Release|Win32.ActiveCfg = Release|Win32
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Release|Win32.Build.0 = Release|Win32
+		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Debug|Win32.Build.0 = Debug|Win32
+		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Profile|Win32.ActiveCfg = Profile|Win32
+		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Profile|Win32.Build.0 = Profile|Win32
+		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Release|Win32.ActiveCfg = Release|Win32
+		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
