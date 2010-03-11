@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual C++ Express 2005
+# Visual Studio 2005
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RadDude", "RadDude.vcproj", "{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Car", "Car.vcproj", "{EE92B72B-0CBC-4962-8E12-64065F917D28}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "balljoints", "balljoints.vcproj", "{5D9F6EBF-2BAA-4FED-A3A2-A5D8E7FFA87C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hingejoints", "hingejoints.vcproj", "{A75D9572-2C08-46EE-9C1A-73EB77D40890}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,18 @@ Global
 		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Profile|Win32.Build.0 = Profile|Win32
 		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Release|Win32.ActiveCfg = Release|Win32
 		{EE92B72B-0CBC-4962-8E12-64065F917D28}.Release|Win32.Build.0 = Release|Win32
+		{5D9F6EBF-2BAA-4FED-A3A2-A5D8E7FFA87C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5D9F6EBF-2BAA-4FED-A3A2-A5D8E7FFA87C}.Debug|Win32.Build.0 = Debug|Win32
+		{5D9F6EBF-2BAA-4FED-A3A2-A5D8E7FFA87C}.Profile|Win32.ActiveCfg = Profile|Win32
+		{5D9F6EBF-2BAA-4FED-A3A2-A5D8E7FFA87C}.Profile|Win32.Build.0 = Profile|Win32
+		{5D9F6EBF-2BAA-4FED-A3A2-A5D8E7FFA87C}.Release|Win32.ActiveCfg = Release|Win32
+		{5D9F6EBF-2BAA-4FED-A3A2-A5D8E7FFA87C}.Release|Win32.Build.0 = Release|Win32
+		{A75D9572-2C08-46EE-9C1A-73EB77D40890}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A75D9572-2C08-46EE-9C1A-73EB77D40890}.Debug|Win32.Build.0 = Debug|Win32
+		{A75D9572-2C08-46EE-9C1A-73EB77D40890}.Profile|Win32.ActiveCfg = Profile|Win32
+		{A75D9572-2C08-46EE-9C1A-73EB77D40890}.Profile|Win32.Build.0 = Profile|Win32
+		{A75D9572-2C08-46EE-9C1A-73EB77D40890}.Release|Win32.ActiveCfg = Release|Win32
+		{A75D9572-2C08-46EE-9C1A-73EB77D40890}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

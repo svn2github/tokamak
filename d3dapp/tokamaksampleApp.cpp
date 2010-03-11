@@ -46,6 +46,7 @@ HRESULT CALLBACK OnMyAppCreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSUR
     // forced into software.  See the DirectX documentation for more information about 
     // using the shader debugger.
     DWORD dwShaderFlags = D3DXFX_NOT_CLONEABLE;
+	dwShaderFlags |= D3DXSHADER_ENABLE_BACKWARDS_COMPATIBILITY;
 
     #if defined( DEBUG ) || defined( _DEBUG )
     // Set the D3DXSHADER_DEBUG flag to embed debug information in the shaders.
@@ -53,7 +54,9 @@ HRESULT CALLBACK OnMyAppCreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSUR
     // the shaders to be optimized and to run exactly the way they will run in 
     // the release configuration of this program.
 	dwShaderFlags |= D3DXSHADER_ENABLE_BACKWARDS_COMPATIBILITY;
+	dwShaderFlags |= D3DXSHADER_DEBUG;
     #endif
+	
 
     #ifdef DEBUG_VS
         dwShaderFlags |= D3DXSHADER_FORCE_VS_SOFTWARE_NOOPT;
@@ -88,7 +91,7 @@ HRESULT CALLBACK OnMyAppCreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSUR
 	g_hViewPos = g_pEffect->GetParameterByName(NULL, "g_ViewPos");
 
     // Create mesh
-    WCHAR wsz[MAX_PATH];
+//    WCHAR wsz[MAX_PATH];
 //    V_RETURN( DXUTFindDXSDKMediaFileCch( wsz, MAX_PATH, L"misc\\cell.x" ) );
 //	V_RETURN( DXUTFindDXSDKMediaFileCch( wsz, MAX_PATH, L"cell.x" ) );
 //    g_Cell.Create( pd3dDevice, wsz );

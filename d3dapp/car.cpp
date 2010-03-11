@@ -303,6 +303,7 @@ void CSampleCar::Cleanup()
 		for (s32 j = 0; j < N_RENDER_PRIMITIVES; j++)
 		{
 			sample.cars[i].carRenderPrimitives[j].mMesh.Destroy();
+			sample.cars[i].nextRenderPrim = 0;
 		}
 	}
 
@@ -388,7 +389,6 @@ void CCar::MakeCar(neSimulator * sim, neV3 & pos)
 
 	{ // setup the display boxes for the car
 
-		s32 i = 0;
 		
 		rigidBody->BeginIterateGeometry();
 
@@ -524,9 +524,7 @@ void MyAppInit()
 {
     // TODO: Perform any application-level initialization here
     // Setup the camera
-    D3DXVECTOR3 MinBound( g_MinBound.x + CAMERA_SIZE, g_MinBound.y + CAMERA_SIZE, g_MinBound.z + CAMERA_SIZE );
-    D3DXVECTOR3 MaxBound( g_MaxBound.x - CAMERA_SIZE, g_MaxBound.y - CAMERA_SIZE, g_MaxBound.z - CAMERA_SIZE );
-
+  
     g_Camera.SetEnableYAxisMovement( true );
     g_Camera.SetRotateButtons( false, false, true );
     g_Camera.SetScalers( 0.01f, 50.0f );
@@ -711,7 +709,6 @@ void CALLBACK MyAppKeyboardProc( UINT nChar, bool bKeyDown, bool bAltDown, void*
 		 case 'R':
 			 {
 				//OnMyAppDestroyDevice(g_pD3dDevice);
-
 				sample.Reset();
 			 }
 			 break;
@@ -779,7 +776,7 @@ void CCar::CarController(neRigidBodyController * controller)
 
 		neV3 linePos = body2World * sn->GetLinePos();
 
-		f32 dot = lineNormal.Dot(groundNormal) * -1.0f;
+		//f32 dot = lineNormal.Dot(groundNormal) * -1.0f;
 
 		//if (dot <= 0.7f)
 		//	continue;
