@@ -223,7 +223,7 @@ void CSampleBallJoints::InititialisePhysics()
 		/* set up the graphical models */
 		{
 			this->boxRenderPrimitives[j].SetGraphicBox(boxSize[0],boxSize[1],boxSize[2]);
-			geom->SetUserData((u32)&boxRenderPrimitives[j]);
+			geom->SetUserData((u32)&(boxRenderPrimitives[j]));
 			this->boxRenderPrimitives[j].SetDiffuseColor(D3DXCOLOR(0.8f,0.2f,0.2f,1.0f));
 			
 		}
@@ -262,8 +262,8 @@ void MyAppInit()
 
 
 
-	D3DXVECTOR3 vecEye (-10.0f, 5.0f, 40.0f);
-	D3DXVECTOR3 vecAt (0.0f, 0.0f, 1.0f);
+	D3DXVECTOR3 vecEye (-10.0f, 5.0f, 50.0f);
+	D3DXVECTOR3 vecAt (-30.0f, 0.0f, 0.0f);
 	g_Camera.SetViewParams( &vecEye, &vecAt );
 
     g_Camera.SetEnableYAxisMovement( true );

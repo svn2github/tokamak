@@ -69,14 +69,14 @@ HRESULT CDXUTMesh::Create( LPDIRECT3DDEVICE9 pd3dDevice, LPCWSTR strFilename )
     }
 
     // Optimize the mesh for performance
-    if( FAILED( hr = m_pMesh->OptimizeInplace(
-                        D3DXMESHOPT_COMPACT | D3DXMESHOPT_ATTRSORT | D3DXMESHOPT_VERTEXCACHE,
-                        (DWORD*)pAdjacencyBuffer->GetBufferPointer(), NULL, NULL, NULL ) ) )
-    {
-        SAFE_RELEASE( pAdjacencyBuffer );
-        SAFE_RELEASE( pMtrlBuffer );
-        return hr;
-    }
+    //if( FAILED( hr = m_pMesh->OptimizeInplace(
+    //                    D3DXMESHOPT_COMPACT | D3DXMESHOPT_ATTRSORT | D3DXMESHOPT_VERTEXCACHE,
+    //                    (DWORD*)pAdjacencyBuffer->GetBufferPointer(), NULL, NULL, NULL ) ) )
+    //{
+    //    SAFE_RELEASE( pAdjacencyBuffer );
+    //    SAFE_RELEASE( pMtrlBuffer );
+    //    return hr;
+    //}
 
     // Set strPath to the path of the mesh file
     WCHAR *pLastBSlash = wcsrchr( strPath, L'\\' );

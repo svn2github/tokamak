@@ -43,6 +43,7 @@ public:
 	void SetGraphicBox(float Width, float Height, float Depth);
 	void SetGraphicSphere(float radius);
 	void SetGraphicCylinder(float radius, float length);
+	void SetGraphicMesh(LPCWSTR strFilename);
 	void Render(IDirect3DDevice9* pd3dDevice, neT3 * matrix);
 };
 

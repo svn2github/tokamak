@@ -227,6 +227,10 @@ void CRenderPrimitive::SetGraphicCylinder(float radius, float length)
 
 	mIsCylinder = 1;
 }
+void CRenderPrimitive::SetGraphicMesh(LPCWSTR strFilename)
+{
+	mMesh.Create(g_pD3dDevice,strFilename);
+}
 
 void CRenderPrimitive::Render(IDirect3DDevice9* pd3dDevice, neT3 * matrix)
 {

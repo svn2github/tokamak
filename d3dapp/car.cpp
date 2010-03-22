@@ -64,7 +64,7 @@ const f32 WHEEL_WIDTH = 0.3f;
 const f32 MAX_SPEED = 5.0f;
 const f32 MAX_REVERSE_SPEED = -2.0f;
 const f32 MAX_STEER = 0.7f;
-const f32 MAX_SLIDE = 0.8f;
+const f32 MAX_SLIDE = 0.90f;
 
 struct SensorData
 {
@@ -825,9 +825,15 @@ void CCar::CarController(neRigidBodyController * controller)
 
 		if (i == 2 || i ==3)
 		{
-			//f *= (1.0f - slide);
+			f *= (1.0f - slide);
+			if (slide > MAX_SLIDE)
+			{
+				f  *= 0.02;
+			}
 		}
 		f[1] = 0.0f;
+
+
 		
 		force += f;
 
@@ -918,29 +924,27 @@ void CCar::Process(XINPUT_STATE & InputState)
 	}
 	else 
 	{
-		//accel *= 0.99f;
+		accel *= 0.999999f;
 	}
 
 	if (GetAsyncKeyState('L'))
 	{
 		steer += 0.02f;
-		steer = MAX_STEER;
 		if (steer > MAX_STEER)
 		{
 			steer = MAX_STEER;
 
-			slide += 0.05f;
+			//slide += 0.05f;
 		}
 	}
 	else if (GetAsyncKeyState('K'))
 	{
 		steer -= 0.02f;
-		steer = -MAX_STEER;
 		if (steer < -MAX_STEER)
 		{
 			steer = -MAX_STEER;
 
-			slide += 0.05f;
+			//slide += 0.05f;
 		}
 	}
 	else if (InputState.Gamepad.sThumbLX != 0)
@@ -956,11 +960,17 @@ void CCar::Process(XINPUT_STATE & InputState)
 	{
 		steer *= 0.9f;
 
-		slide *= 0.85f;
+		slide *= 0.9f;
 	}
+
 	if (slide > MAX_SLIDE)
 	{
 		slide = MAX_SLIDE;
+	}
+
+	if (GetAsyncKeyState('T'))
+	{
+		slide = MAX_SLIDE+0.5;
 	}
 }
 

@@ -1,7 +1,7 @@
 @echo off
 @echo clear vs tmp file
 del *.user
-del *.suo
+del /a h *.suo
 del *.ncb
 del *.pdb
 del *_d.exe
